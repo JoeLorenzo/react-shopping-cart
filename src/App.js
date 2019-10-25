@@ -36,15 +36,14 @@ function App() {
 						path="/"
 						render={() => (
 							<Products
-								products={products}
-								addItem={addItem}
+								component={Products}
 							/>
 						)}
 					/>
 
 					<Route
 						path="/cart"
-						render={() => <ShoppingCart cart={cart} />}
+						component={ShoppingCart}
 					/>
 				</div>
 			<CartContext.Provider>
