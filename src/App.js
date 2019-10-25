@@ -13,7 +13,12 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
+		setCart([item, ...cart])
 	};
+
+	const removeItem = item => {
+		setCart([cart.filter(cartItem => cartItem.id !== item.id)])
+}
 
 	return (
 		<div className="App">
